@@ -65,6 +65,12 @@ db.products.find({
   category: 1,
 });
 
+db.products.find({
+  name: 1,
+  company: 1,
+  category: 1,
+});
+
 db.products.update(
   {name: "Stanley"},        //What to update
   {
