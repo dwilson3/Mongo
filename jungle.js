@@ -59,3 +59,24 @@ db.product.insert({
   qty: 10,
   price: .99
 });
+
+db.products.find({
+  company: 1,
+  category: 1,
+});
+
+db.products.update(
+  {name: "Stanley"},        //What to update
+  {
+    $rename : {name: "Stanley Black and Decker" }  
+  }
+);
+
+db.products.find( { price: { $gt: 10.00 } } );
+
+db.products.remove({ 
+  
+  name: { $eq: "Crest" },
+  
+  
+}, true);
